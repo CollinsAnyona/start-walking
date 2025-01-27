@@ -46,6 +46,8 @@
 
   });
 
+  
+
   /**
    * Toggle mobile nav dropdowns
    */
@@ -183,6 +185,37 @@
       }
     }
   });
+
+    // Get elements
+    const donateButton = document.getElementById("donate-button");
+    const donateModal = document.getElementById("donate-modal");
+    const closeModal = document.getElementById("close-modal");
+
+    // Show modal when Donate button is clicked
+    donateButton.addEventListener("click", () => {
+      donateModal.style.display = "flex";
+    });
+
+    // Hide modal when Close button is clicked
+    closeModal.addEventListener("click", () => {
+      donateModal.style.display = "none";
+    });
+
+    // Add functionality for each payment option
+    document.getElementById("mpesa-option").addEventListener("click", () => {
+      alert("Redirecting to Mpesa payment...");
+      // Add your Mpesa integration logic here
+    });
+
+    document.getElementById("credit-card-option").addEventListener("click", () => {
+      alert("Redirecting to Credit Card payment...");
+      // Add your Credit Card integration logic here
+    });
+
+    document.getElementById("paypal-option").addEventListener("click", () => {
+      alert("Redirecting to PayPal payment...");
+      // Add your PayPal integration logic here
+    });
 
   /**
    * Navmenu Scrollspy
